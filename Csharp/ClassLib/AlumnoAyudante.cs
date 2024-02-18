@@ -1,6 +1,6 @@
 namespace ClassLib;
 
-public class AlumnoAyudante : Estudiante, IProfesor
+public sealed class AlumnoAyudante : Estudiante, IProfesor
 {
     private int _horasClaseImpartidas;
     public int HorasClaseImpartidas

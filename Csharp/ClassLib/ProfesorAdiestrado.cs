@@ -1,5 +1,5 @@
 ﻿namespace ClassLib;
-public class ProfesorAdiestrado : Profesor, IEstudiante
+public sealed class ProfesorAdiestrado : Profesor, IEstudiante
 {
     private int _horasClaseRecibidas;
     public int HorasClaseRecibidas
