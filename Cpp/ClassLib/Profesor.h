@@ -5,10 +5,8 @@
 
 class Profesor : public Trabajador
 {
-protected:
-    int horasClaseImpartidas;
-
 public:
+    int horasClaseImpartidas;
     Profesor(std::string nombre, double salario, int horasClaseImpartidas) : Trabajador(nombre, salario), horasClaseImpartidas(horasClaseImpartidas) {}
     virtual void ImpartirClase()
     {
