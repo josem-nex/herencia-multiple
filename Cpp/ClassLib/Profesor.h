@@ -1,15 +1,19 @@
-#include "Trabajador.h"
-#include "IImparteClase.h"
+#ifndef PROFESOR_H
+#define PROFESOR_H
 
-class Profesor : public Trabajador, public IImparteClase
+#include "Trabajador.h"
+
+class Profesor : public Trabajador
 {
 protected:
     int horasClaseImpartidas;
 
 public:
     Profesor(std::string nombre, double salario, int horasClaseImpartidas) : Trabajador(nombre, salario), horasClaseImpartidas(horasClaseImpartidas) {}
-    void ImpartirClase() override
+    virtual void ImpartirClase()
     {
-        // Implementación de ImpartirClase
+        printf("El profesor %s imparte %i horas clase\n", nombre.c_str(), horasClaseImpartidas);
     }
 };
+
+#endif
