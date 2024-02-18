@@ -1,6 +1,6 @@
 namespace ClassLib;
 
-public class AlumnoAyudante : Estudiante, IImparteClase
+public class AlumnoAyudante : Estudiante, IProfesor
 {
     private int _horasClaseImpartidas;
     public int HorasClaseImpartidas
@@ -26,5 +26,9 @@ public class AlumnoAyudante : Estudiante, IImparteClase
     public override void CobrarSalario()
     {
         System.Console.WriteLine("El alumno ayudante {0} ha cobrado", Nombre);
+    }
+    public override void RecibirClase()
+    {
+        Console.WriteLine("El alumno ayudante {0} ha recibido {1} horas clase", Nombre, HorasClaseRecibidas);
     }
 }

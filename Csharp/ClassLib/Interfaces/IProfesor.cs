@@ -1,6 +1,6 @@
 namespace ClassLib;
 
-public interface IImparteClase
+public interface IProfesor
 {
     void ImpartirClase();
 }

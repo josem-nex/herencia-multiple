@@ -1,5 +1,5 @@
 ﻿namespace ClassLib;
-public class ProfesorAdiestrado : Profesor, IRecibeClase
+public class ProfesorAdiestrado : Profesor, IEstudiante
 {
     private int _horasClaseRecibidas;
     public int HorasClaseRecibidas
@@ -19,5 +19,9 @@ public class ProfesorAdiestrado : Profesor, IRecibeClase
     public void RecibirClase()
     {
         Console.WriteLine("El profesor adiestrado {0} ha recibido {1} horas clase.", Nombre, HorasClaseRecibidas);
+    }
+    public override void ImpartirClase()
+    {
+        Console.WriteLine("El profesor adiestrado {0} ha impartido {1} horas clase.", Nombre, HorasClaseImpartidas);
     }
 }

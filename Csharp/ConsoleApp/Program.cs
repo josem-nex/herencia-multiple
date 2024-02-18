@@ -11,13 +11,23 @@ public class Program
 
         Console.WriteLine("Testing");
         var profesorJuan = new Profesor("Juan", 1000, 10);
-        var alumnoAyudantePedro = new AlumnoAyudante("Pedro", 500, 10, 5);
+        System.Console.WriteLine(profesorJuan.GetType());
+        profesorJuan.ImpartirClase();
+        var alumnoAyudanteTomas = new AlumnoAyudante("Tomas", 500, 10, 5);
+        System.Console.WriteLine(alumnoAyudanteTomas.GetType());
+        alumnoAyudanteTomas.ImpartirClase();
         var profesorAdiestradoLuis = new ProfesorAdiestrado("Luis", 1500, 10, 5);
-        var estudianteAna = new Estudiante("Ana", 10, 20);
+        var estudianteThalia = new Estudiante("Thalia", 10, 20);
+        System.Console.WriteLine(estudianteThalia.GetType());
+        estudianteThalia.RecibirClase();
         var trabajadorPepe = new Trabajador("Pepe", 1000);
-
+        System.Console.WriteLine("----------------------------------------");
+        profesorJuan.CobrarSalario();
         var profesorAsTrabajador = (Trabajador)profesorJuan;
-        System.Console.WriteLine(profesorAsTrabajador.GetType());
+        Trabajador[] trabajadors = new Trabajador[4];
+        trabajadors[0] = profesorJuan;
+        System.Console.WriteLine(trabajadors[0].GetType());
+        profesorAsTrabajador.CobrarSalario();
         // var profesorAsEstudiante = (Estudiante)profesorJuan;  // error
         // var profesorAsAlumnoAyudante = (AlumnoAyudante)profesorJuan;   // error
         // var profesorAsProfesorAdiestrado = (ProfesorAdiestrado)profesorJuan; // error pero si permite ponerlo en el codigo xq es posible que se pueda cumplirs
@@ -27,10 +37,14 @@ public class Program
         System.Console.WriteLine("----------------------------------------");
         Profesor profesorAdiestradoAsProfesor = profesorAdiestradoLuis;
         System.Console.WriteLine(profesorAdiestradoAsProfesor.GetType());
-        Estudiante alumnoAyudanteAsEstudiante = alumnoAyudantePedro;
+        Estudiante alumnoAyudanteAsEstudiante = alumnoAyudanteTomas;
         System.Console.WriteLine(alumnoAyudanteAsEstudiante.GetType());
-        System.Console.WriteLine("----------------------------------------");
+        System.Console.WriteLine("Interfaces-----------------------");
         // AlumnoAyudante candela = (AlumnoAyudante)profesorAdiestradoLuis; // no se puede hacer el cast, tipos diferentes
         // System.Console.WriteLine(profesorAsProfesorAdiestrado.GetType());
+        IEstudiante estudianteTest = profesorAdiestradoLuis;
+        Trabajador trabajadorTest = profesorAdiestradoLuis;
+        IProfesor profesorTest = profesorAdiestradoLuis;
+        trabajadorTest.CobrarSalario();
     }
 }

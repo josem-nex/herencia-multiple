@@ -1,6 +1,6 @@
 namespace ClassLib;
 
-public class Profesor : Trabajador, IImparteClase
+public class Profesor : Trabajador, IProfesor
 {
     private int _horasClaseImpartidas;
     public int HorasClaseImpartidas
@@ -17,8 +17,12 @@ public class Profesor : Trabajador, IImparteClase
     {
         _horasClaseImpartidas = horasClaseImpartidas;
     }
+    public override void CobrarSalario()
+    {
+        Console.WriteLine("El profesor {0} ha cobrado {1}", Nombre, Salario);
+    }
 
-    public void ImpartirClase()
+    public virtual void ImpartirClase()
     {
         Console.WriteLine("El profesor {0} ha impartido {1} horas clase.", Nombre, HorasClaseImpartidas);
     }

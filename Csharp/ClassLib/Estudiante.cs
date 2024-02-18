@@ -1,6 +1,6 @@
 namespace ClassLib;
 
-public class Estudiante : Persona, IRecibeClase
+public class Estudiante : Persona, IEstudiante
 {
     private int _horasClaseRecibidas;
     public int HorasClaseRecibidas
@@ -18,7 +18,7 @@ public class Estudiante : Persona, IRecibeClase
         _horasClaseRecibidas = horasClaseRecibidas;
     }
 
-    public void RecibirClase()
+    public virtual void RecibirClase()
     {
         Console.WriteLine("El estudiante {0} ha recibido {1} horas clase", Nombre, HorasClaseRecibidas);
     }

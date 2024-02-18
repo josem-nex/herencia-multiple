@@ -24,7 +24,6 @@ public abstract class Persona : ICobraSalario
 
     public virtual void CobrarSalario()
     {
-        // Implementación de CobrarSalario
         Console.WriteLine("La persona {0} ha cobrado {1}", Nombre, Salario);
     }
 }

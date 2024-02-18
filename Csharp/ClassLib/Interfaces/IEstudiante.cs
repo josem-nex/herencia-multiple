@@ -1,6 +1,6 @@
 namespace ClassLib;
 
-public interface IRecibeClase
+public interface IEstudiante
 {
     void RecibirClase();
 }
