@@ -2,16 +2,10 @@ namespace ClassLib;
 
 public class Profesor : Trabajador, IProfesor
 {
-    private int _horasClaseImpartidas;
+    protected int _horasClaseImpartidas;
     public int HorasClaseImpartidas
     {
         get => _horasClaseImpartidas;
-        set
-        {
-            if (value < 0)
-                throw new ArgumentException("Las horas de clase no pueden ser menores que 0");
-            _horasClaseImpartidas = value;
-        }
     }
     public Profesor(string nombre, decimal salario, int horasClaseImpartidas) : base(nombre, salario)
     {
@@ -21,9 +15,21 @@ public class Profesor : Trabajador, IProfesor
     {
         Console.WriteLine("El profesor {0} ha cobrado {1}", Nombre, Salario);
     }
+    public override void CobrarSalario(decimal newSalario)
+    {
+        VerificarValor(newSalario);
+        _salario = newSalario;
+        Console.WriteLine("El profesor {0} ahora cobra {1}", Nombre, newSalario);
+    }
 
     public virtual void ImpartirClase()
     {
         Console.WriteLine("El profesor {0} ha impartido {1} horas clase.", Nombre, HorasClaseImpartidas);
+    }
+    public virtual void ImpartirClase(int horasClaseImpartidas)
+    {
+        VerificarValor(horasClaseImpartidas);
+        _horasClaseImpartidas = horasClaseImpartidas;
+        Console.WriteLine("El profesor {0} ahora imparte {1} horas clase.", Nombre, HorasClaseImpartidas);
     }
 }

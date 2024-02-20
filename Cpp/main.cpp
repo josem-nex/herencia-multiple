@@ -52,8 +52,6 @@ int main(int argc, char const *argv[])
      ! AlumnoAyudante != ProfesorAdiestrado
      En C++, no puedes asignar directamente objetos de dos tipos de clases diferentes,
      incluso si tienen los mismos métodos y heredan de las mismas clases base.
-     C++ es un lenguaje de programación de tipado estático, lo que significa que el tipo de cada variable
-     se conoce en tiempo de compilación y no puede cambiar en tiempo de ejecución.
      */
     return 0;
 }

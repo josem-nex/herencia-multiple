@@ -46,5 +46,15 @@ public class Program
         Trabajador trabajadorTest = profesorAdiestradoLuis;
         IProfesor profesorTest = profesorAdiestradoLuis;
         trabajadorTest.CobrarSalario();
+        System.Console.WriteLine("-----------DIA DE COBRO----------");
+        List<ICobraSalario> cobradores = new List<ICobraSalario>();
+        cobradores.Add(profesorJuan);
+        cobradores.Add(alumnoAyudanteTomas);
+        cobradores.Add(profesorAdiestradoLuis);
+        cobradores.Add(estudianteThalia);
+        cobradores.Add(trabajadorPepe);
+        foreach (var cobrador in cobradores)
+            cobrador.CobrarSalario();
+
     }
 }

@@ -2,27 +2,19 @@
 {
     void CobrarSalario();
 }
-public interface ITrabajador
+public interface IEstudiante
 {
     void CobrarSalario();
 }
-public class Maestro
-{
-    public void CobrarSalario()
-    {
-        Console.WriteLine("El maestro cobra su salario");
-    }
-
-}
-public class Profesor : IProfesor, ITrabajador
+public class AlumnoAyudante : IProfesor, IEstudiante
 {
     public void CobrarSalario()
     {
         Console.WriteLine("Cobra su salario");
     }
-    // void ITrabajador.CobrarSalario()
+    // void IEstudiante.CobrarSalario()
     // {
-    //     Console.WriteLine("El trabajador cobra su salario");
+    //     Console.WriteLine("El estudiante cobra su salario");
     // }
     // void IProfesor.CobrarSalario()
     // {
@@ -32,13 +24,6 @@ public class Profesor : IProfesor, ITrabajador
 
 class Trabajador
 {
-    public string Nombre { get; set; }
-
-    public Trabajador(string nombre)
-    {
-        Nombre = nombre;
-    }
-
     public void CobrarSalario()
     {
         Console.WriteLine("El trabajador cobra su salario");
@@ -46,8 +31,6 @@ class Trabajador
 }
 class Empleado : Trabajador
 {
-    public Empleado(string nombre) : base(nombre) { }
-
     public /* new */ void CobrarSalario()
     {
         // base.CobrarSalario();
@@ -63,14 +46,15 @@ class Program
     static void Main()
     {
         //  c# utiliza la palabra clave new en el metodo para indicar que se esta ocultando el metodo de la clase base
-        Empleado empleado = new Empleado("Juan Perez");
+        Empleado empleado = new Empleado();
         empleado.CobrarSalario();
         ((Trabajador)empleado).CobrarSalario();
         Console.WriteLine("------Interfaces------");
-        Profesor profesor = new Profesor();
-        profesor.CobrarSalario();
-        ((ITrabajador)profesor).CobrarSalario();
-        ((IProfesor)profesor).CobrarSalario();
+        AlumnoAyudante alumnoA = new AlumnoAyudante();
+        alumnoA.CobrarSalario();
+        ((IEstudiante)alumnoA).CobrarSalario();
+        IProfesor profesorA = alumnoA;
+        profesorA.CobrarSalario();
         var test = new HerenciaImplicita();
         Console.WriteLine(test.GetType());
     }
