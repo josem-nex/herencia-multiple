@@ -19,14 +19,14 @@ int main(int argc, char const *argv[])
     Trabajador *trabajadorPepe = new Trabajador("Pepe", 2000);
     Estudiante *estudianteJuan = new Estudiante("Juan", 0, 10);
     Profesor *profesorLuis = new Profesor("Luis", 3000, 20);
-    AlumnoAyudante *alumnoAyudanteThalia = new AlumnoAyudante("Thalia", 0, 10, 20);
+    AlumnoAyudante *alumnoAyudanteThalia = new AlumnoAyudante("Thalia", 5, 10, 20);
     ProfesorAdiestrado *profesorAdiestradoMaria = new ProfesorAdiestrado("Maria", 3000, 20, 10);
 
     Trabajador *AlumnoAyudanteAsTrabajador = alumnoAyudanteThalia;
     Estudiante *AlumnoAyudanteAsEstudiante = alumnoAyudanteThalia;
     Trabajador *ProfesorAdiestradoAsTrabajador = profesorAdiestradoMaria;
     Estudiante *ProfesorAdiestradoAsEstudiante = profesorAdiestradoMaria;
-    printf("El estudiante imparte %i horas clase\n", alumnoAyudanteThalia->horasClaseImpartidas);
+    alumnoAyudanteThalia->ImpartirClase();
 
     Estudiante *estudiante = dynamic_cast<Estudiante *>(alumnoAyudanteThalia);
     if (estudiante)

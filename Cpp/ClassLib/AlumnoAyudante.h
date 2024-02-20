@@ -7,7 +7,6 @@
 class AlumnoAyudante : public Estudiante, public Profesor
 {
 public:
-    int horasClaseImpartidas;
     AlumnoAyudante(std::string nombre, double salario, int horasClaseRecibidas, int horasClaseImpartidas) : Estudiante(nombre, salario, horasClaseRecibidas), Profesor(nombre, salario, horasClaseImpartidas) {}
     void ImpartirClase() override
     {
