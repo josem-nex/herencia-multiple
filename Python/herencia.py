@@ -16,6 +16,7 @@ class Estudiante(Persona):
     def __init__(self, nombre, salario) -> None:
         super().__init__(nombre, salario)
         self.horas_clase_recibidas = 0
+        self.graduado = False
     def CobrarSalario(self):
         print("Cobrando salario como estudiante")
     def RecibirClases(self, horas: int):
@@ -28,11 +29,12 @@ class Profesor(Trabajador):
     def __init__(self, nombre, salario) -> None:
         super().__init__(nombre, salario)
         self.horas_clase_impartidas = 0
+        self.graduado = True
     def CobrarSalario(self):
         print("Cobrando salario como profesor")
     def ImpartirClases(self, horas: int):
         print("Impartiendo clases ...")
-        self.horas_clase_impartidas += horas
+        self._horas_clase_impartidas += horas
         txt = "Horas clase impartidas: {} horas"
         print(txt.format(self.horas_clase_impartidas))
 
@@ -47,15 +49,3 @@ class ProfesorAdiestrado(Profesor, Estudiante):
         super().__init__(nombre, salario)
     def CobrarSalario(self):
         print("Cobrando salario como ProfesorAdiestrado")
-
-x = ProfesorAdiestrado("Raimel", 10)
-print(x.nombre)
-print(x.salario)
-print("-----------------")
-x.ImpartirClases(10)
-print("-----------------")
-x.RecibirClases(20)
-print("-----------------")
-x.ImpartirClases(30)
-print("-----------------")
-x.RecibirClases(10)

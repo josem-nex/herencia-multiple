@@ -15,6 +15,7 @@ public class Program
         var profesorAdiestradoLuis = new ProfesorAdiestrado("Luis", 1500, 10, 5);
         var estudianteThalia = new Estudiante("Thalia", 10, 20);
         var trabajadorPepe = new Trabajador("Pepe", 1000);
+
         System.Console.WriteLine("----------------------------------------");
         Persona[] personas =
         [

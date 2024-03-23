@@ -36,11 +36,11 @@ class AlumnoAyudante : public Estudiante, public Profesor
 public:
     AlumnoAyudante(const std::string &nombre) : Estudiante(nombre), Profesor(nombre) {}
     void ImpartirClase() {}
-    // void CobrarSalario() override
-    // {
-    //     Profesor::CobrarSalario();
-    //     printf("El alumno ayudante cobra salario");
-    // }
+    void CobrarSalario() override
+    {
+            Profesor::CobrarSalario();
+        // printf("El alumno ayudante cobra salario");
+    }
 };
 
 int main(int argc, char const *argv[])

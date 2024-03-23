@@ -22,7 +22,7 @@
 
 ## C#, Herencia Simple, Interfaces:
 
-![alt text](/Images/JerarquiaClases.excalidraw.png)
+![alt text](/HerenciaMultiple/Images/JerarquiaClases.excalidraw.png)
 
 ---
 
@@ -38,7 +38,7 @@
 
 ## Python, C++, Herencia Múltiple
 
-![alt text](/Images/JerHerencMult.excalidraw.png)
+![alt text](/HerenciaMultiple/Images/JerHerencMult.excalidraw.png)
 
 ###
 
@@ -233,7 +233,7 @@ Para solucionar problemas de este tipo y aprovechar al máximo el **Polimorfismo
 ### Visibilidad
 
 La visibilidad de los diferentes tipos de datos es otro aspecto importante al trabajar con Programación Orientada a Objetos que en algunos casos puede provocar errores o ambigüeadad, para ello existen los modificadores de acceso. Se utilizan para la ocultación de datos y veamos las posibilidades que nos brinda **C#**:
-![alt text](/Images/Visibilidad.png)
+![alt text](/HerenciaMultiple/Images/Visibilidad.png)
 
 > Un ensamblado es un archivo .dll o .exe creado mediante la compilación de uno o varios archivos .cs en una sola compilación.
 
@@ -241,7 +241,7 @@ La visibilidad de los diferentes tipos de datos es otro aspecto importante al tr
 
 No todos los modificadores de acceso son válidos para todos los tipos o miembros de todos los contextos. En algunos casos, la accesibilidad de un miembro de tipo está restringida por la accesibilidad de su tipo contenedor.
 
-![alt text](/Images/Accesibilidad.png)
+![alt text](/HerenciaMultiple/Images/Accesibilidad.png)
 
 Es importante al crear una Jerarquía de Clases tener en cuenta los diferentes modificadores de acceso, pues podríamos estar dando acceso público a información delicada.
 
@@ -309,7 +309,7 @@ bird.fly()
 
 > En C++, la administración de memoria es manual, lo que brinda un control total y permite un uso eficiente de los recursos, pero también introduce la posibilidad de errores y agrega complejidad al desarrollo. En contraste, Python y C# tienen administración automática de memoria, lo que reduce el riesgo de errores y facilita el desarrollo, aunque puede haber una sobrecarga de rendimiento y menos control directo sobre la gestión de memoria. La elección entre los enfoques depende de los requisitos del proyecto y las preferencias del programador.
 
-## Conclusiones, Herencia Múltiple vs Herencia ssimple e Interfaces
+## Conclusiones, Herencia Múltiple vs Herencia simple e Interfaces
 
 En la comunidad de programación hay un amplio debate sobre si la herencia múltiple puede ser implementada de forma simple y sin ambigüedad pregúntandose si esta es más fácil que usar herencia simple y patrones de diseño de software.
 
